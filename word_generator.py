@@ -11,22 +11,22 @@ D = diphthongs.split()
 G = consonant_digraphs.split()
 
 for i in range(100):
-    word = ""
+  word = ""
 
-    if random.randrange(100) < 50:
-        word += random.choice(V)
-    else:
-        word += random.choice(D)
+  if random.randrange(100) < 50:
+    word += random.choice(V)
+  else:
+    word += random.choice(D)
 
-    if random.randrange(100) < 50:
-        word += random.choice(C)
+  if random.randrange(100) < 50:
+    word += random.choice(C)
 
-    if random.randrange(100) < 30:
-        word += random.choice(D)
-    else:
-        word += random.choice(C)
+  if random.randrange(100) < 30:
+    word += random.choice(D)
+  else:
+    word += random.choice(C)
 
-    if random.randrange(100) < 50:
-        word += random.choice(C)
+  if random.randrange(100) < 50:
+    word += random.choice(C)
 
-    print(word)
+  print(word)
