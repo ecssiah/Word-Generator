@@ -2,44 +2,44 @@
 
 import random
 
-vowels = "o oo i ii a aa e ee u uu"
-consonants = "s n c p m r z l v j b d t h f ʒ w y ŋ g"
-vowel_digraphs = "oi oa oe ou io ia iu eo au eo eu uo ui ua ue"
-consonant_digraphs = "ch sh th"
+vowel_list = "o oo i ii a aa e ee u uu"
+consonant_list = "s n c p m r z l v j b d t h f ʒ w y ŋ g"
+vowel_digraph_list = "oi oa oe ou io ia iu eo au eo eu uo ui ua ue"
+consonant_digraph_list = "ch sh th"
 
-V = vowels.split()
-C = consonants.split()
-VD = vowel_digraphs.split()
-CD = consonant_digraphs.split()
+vowels = vowel_list.split()
+consonants = consonant_list.split()
+vowel_digraphs = vowel_digraph_list.split()
+consonant_digraphs = consonant_digraph_list.split()
 
 for i in range(40):
     word = ""
 
     if random.randrange(2) == 0:
         if random.randrange(2) == 0:
-            word += random.choice(VD)
+            word += random.choice(vowel_digraphs)
         else:
-            word += random.choice(V)
+            word += random.choice(vowels)
 
         if random.randrange(10) == 0:
-            word += random.choice(CD)
+            word += random.choice(consonant_digraphs)
         else:
-            word += random.choice(C)
+            word += random.choice(consonants)
 
         if random.randrange(2) == 0:
-            word += random.choice(V)
+            word += random.choice(vowels)
     else:
         if random.randrange(2) == 0:
-            word += random.choice(CD)
+            word += random.choice(consonant_digraphs)
         else:
-            word += random.choice(C)
+            word += random.choice(consonants)
         
         if random.randrange(10) == 0:
-            word += random.choice(VD)
+            word += random.choice(vowel_digraphs)
         else:
-            word += random.choice(V)
+            word += random.choice(vowels)
 
         if random.randrange(2) == 0:
-            word += random.choice(C)
+            word += random.choice(consonants)
 
     print(word)
